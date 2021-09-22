@@ -21,7 +21,7 @@ app.post("/api/session/new", async (reg, res) => {
               product_data: {
                   name: "Tiokronorsprodukt"
               },
-              unit_amount: 10000
+              unit_amount: 1000
           },
           quantity: 1
       }
