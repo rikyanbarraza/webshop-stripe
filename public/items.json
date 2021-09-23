@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Candy Bars",
       "price": "1000 kr",
-      "imgName"; "bars.jpeg"
+      "imgName": "bars.jpeg"
     }
   ],
   "chips": [
@@ -12,7 +12,7 @@
       "id": 2,
       "name": "Chips",
       "price": "1000 kr",
-      "imgName"; "chips.jpeg"
+      "imgName": "chips.jpeg"
     }
   ],
   "coffee": [
@@ -20,7 +20,7 @@
       "id": 3,
       "name": "Coffee",
       "price": "1000 kr",
-      "imgName"; "coffee.jpeg"
+      "imgName": "coffee.jpeg"
     }
   ],
   "cookie": [
@@ -28,7 +28,7 @@
       "id": 4,
       "name": "Cookie",
       "price": "1000 kr",
-      "imgName"; "cookie.jpeg"
+      "imgName": "cookie.jpeg"
     }
   ],
   "cube": [
@@ -36,7 +36,7 @@
       "id": 5,
       "name": "Cube",
       "price": "1000 kr",
-      "imgName"; "cube.jpeg"
+      "imgName": "cube.jpeg"
     }
   ],
   "espresso": [
@@ -44,7 +44,7 @@
       "id": 6,
       "name": "Espresso",
       "price": "1000 kr",
-      "imgName"; "espresso.jpeg"
+      "imgName": "espresso.jpeg"
     }
   ],
   "mask": [
@@ -52,7 +52,7 @@
       "id": 7,
       "name": "mask",
       "price": "1000 kr",
-      "imgName"; "mask.jpeg"
+      "imgName": "mask.jpeg"
     }
   ],
   "nrj": [
@@ -60,7 +60,7 @@
       "id": 8,
       "name": "Energy Drink",
       "price": "1000 kr",
-      "imgName"; "NRJ.jpeg"
+      "imgName": "NRJ.jpeg"
     }
   ],
   "sandwich": [
@@ -68,7 +68,7 @@
       "id": 9,
       "name": "Sandwich",
       "price": "1000 kr",
-      "imgName"; "sandwich.jpeg"
+      "imgName": "sandwich.jpeg"
     }
   ],
   "soda": [
@@ -76,7 +76,7 @@
       "id": 10,
       "name": "Soda",
       "price": "1000 kr",
-      "imgName"; "soda.jpeg"
+      "imgName": "soda.jpeg"
     }
   ]
 }
