@@ -1,82 +1,72 @@
-{
-  "bars": [
+[
     {
       "id": 1,
-      "name": "Candy Bars",
-      "price": "1000 kr",
-      "imgName"; "bars.jpeg"
-    }
-  ],
-  "chips": [
+      "title": "Candy Bars",
+      "description": "En billig produkt",
+      "price": 10,
+      "images": "/Content/bars.jpg"
+    },
     {
       "id": 2,
-      "name": "Chips",
-      "price": "1000 kr",
-      "imgName"; "chips.jpeg"
-    }
-  ],
-  "coffee": [
+      "title": "Chips",
+      "description": "En billig produkt",
+      "price": 10,
+      "images": "/Content/chips.jpg"
+    },
     {
       "id": 3,
-      "name": "Coffee",
-      "price": "1000 kr",
-      "imgName"; "coffee.jpeg"
-    }
-  ],
-  "cookie": [
+      "title": "Coffee",
+      "description": "En billig produkt",
+      "price": 10,
+      "images": "/Content/coffee.jpg"
+    },
     {
       "id": 4,
-      "name": "Cookie",
-      "price": "1000 kr",
-      "imgName"; "cookie.jpeg"
-    }
-  ],
-  "cube": [
+      "title": "Cookie",
+      "description": "En billig produkt",
+      "price": 10,
+      "images": "/Content/cookie.jpg"
+    },
     {
       "id": 5,
-      "name": "Cube",
-      "price": "1000 kr",
-      "imgName"; "cube.jpeg"
-    }
-  ],
-  "espresso": [
+      "title": "Cube",
+      "description": "En billig produkt",
+      "price": 10,
+      "images": "/Content/cube.jpg"
+    },
     {
       "id": 6,
-      "name": "Espresso",
-      "price": "1000 kr",
-      "imgName"; "espresso.jpeg"
-    }
-  ],
-  "mask": [
+      "title": "Espresso",
+      "description": "En billig produkt",
+      "price": 10,
+      "images": "/Content/espresso.jpg"
+    },
     {
       "id": 7,
-      "name": "mask",
-      "price": "1000 kr",
-      "imgName"; "mask.jpeg"
-    }
-  ],
-  "nrj": [
+      "title": "mask",
+      "description": "En billig produkt",
+      "price": 10,
+      "images": "/Content/mask.jpg"
+    },
     {
       "id": 8,
-      "name": "Energy Drink",
-      "price": "1000 kr",
-      "imgName"; "NRJ.jpeg"
-    }
-  ],
-  "sandwich": [
+      "title": "Energy Drink",
+      "description": "En billig produkt",
+      "price": 10,
+      "images": "/Content/NRJ.jpg"
+    },
     {
       "id": 9,
-      "name": "Sandwich",
-      "price": "1000 kr",
-      "imgName"; "sandwich.jpeg"
-    }
-  ],
-  "soda": [
+      "title": "Sandwich",
+      "description": "En billig produkt",
+      "price": 10,
+      "images": "/Content/sandwich.jpg"
+    },
     {
       "id": 10,
-      "name": "Soda",
-      "price": "1000 kr",
-      "imgName"; "soda.jpeg"
+      "title": "Soda",
+      "description": "En billig produkt",
+      "price": 10,
+      "images": "/Content/soda.jpg"
     }
   ]
-}

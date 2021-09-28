@@ -5,27 +5,16 @@ const stripe = require('stripe')(secretkey)
 const express = require('express');
 
 const app = express();
+app.use("/api", express.json());
 
-app.get("/api", (req, res) => {
+/* app.get("/api", (req, res) => {
     res.status(200).send("Hello göfab")
-});
+}); */
 
-app.post("/api/session/new", async (reg, res) => {
+app.post("/api/session/new", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
-      line_items: [
-          {
-          description: "Tiokronorsprodukt", 
-          price_data: {
-              currency: "sek",
-              product_data: {
-                  name: "Tiokronorsprodukt"
-              },
-              unit_amount: 1000
-          },
-          quantity: 1
-      }
-    ],
+      line_items: req.body.line_items,
       mode: "payment",
       success_url: "http://localhost:3000/success.html",
       cancel_url: "http://localhost:3000/index.html"   
