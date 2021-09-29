@@ -184,7 +184,11 @@ cardBody.appendChild(purchaseBtn)
 renderProduct()
 
 
-function renderReceipt() {
+const renderReceipt = () => {
+const product = productList
+    
+Object.entries(productList).map((products) => {
+
 
     let receiptContainer = document.getElementById('receiptContainer') //Product-card
     let receiptOutputOne = document.createElement('li') // Prod-text-container
@@ -192,8 +196,9 @@ function renderReceipt() {
     let  receiptOutputTwo = document.createElement('div')
     let  receiptOutputTwoOne = document.createElement('h6') // Prod-title
     receiptOutputTwoOne.setAttribute('class', 'my-0')
-    let  receiptOutputTwoTwo = document.createElement('small') // Prod-descr.
+    let  receiptOutputTwoTwo = document.createElement('small') // Prod-amount
     receiptOutputTwoTwo.setAttribute('class', 'text-muted')
+    receiptOutputTwoTwo.innerText = products[1].price_data.unit_amount;
     let  receiptOutputTwoThree = document.createElement('span') // Prod-price
     receiptOutputTwoThree.setAttribute('class', 'text-muted)') 
     let receiptOutputThree = document.createElement('li') // Prod-price-container
@@ -201,6 +206,7 @@ function renderReceipt() {
     let  receiptOutputThreeOne = document.createElement('span') // Prod-price-text
     receiptOutputThreeOne.innerHTML = Total (Sek);
     let  receiptOutputThreeTwo = document.createElement('strong') // Prod-price
+    receiptOutputThreeTwo = products[1].price_data.unit_amount /100 + " kr";
 
     receiptContainer.appendChild(receiptOutputOne)
     receiptOutputOne.appendChild(receiptOutputTwo)
@@ -212,7 +218,7 @@ function renderReceipt() {
     receiptOutputThree.appendChild(receiptOutputThreeTwo)
 
     
-   
+})
 
 }
 
