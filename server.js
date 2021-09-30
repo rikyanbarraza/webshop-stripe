@@ -16,12 +16,25 @@ app.post("/api/session/new", async (req, res) => {
       payment_method_types: ["card"],
       line_items: req.body.line_items,
       mode: "payment",
-      success_url: "http://localhost:3000/success.html",
+      success_url: "http://localhost:3000/receipt.html",
       cancel_url: "http://localhost:3000/index.html"   
     })
     console.log(session)
     res.status(200).json({ id: session.id})
 })
+
+app.post("/api/session/verify", async (req, res) => {
+    const sessionId = req.body.sessionId;
+
+    const session = await stripe.checkout.sessions.retrieve(sessionId);
+    
+    if (session.payment_status == "paid") {
+        //spara lämplig info i JSON
+        res.status(200).json({ paid: true });
+    } else {
+        res.status(200).json({ paid: false });
+    }
+});
 
 app.use(express.static('public'));
 

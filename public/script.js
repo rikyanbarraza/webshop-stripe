@@ -2,7 +2,7 @@ const purchaseBtn = document.getElementById('makePurchase');
 const toCartBtn = document.getElementById('toCart');
 
 
-let stripe = Stripe('pk_test_51Jc7a0L3xesmMHJgbAPWLEn3t20phRDibRXtF4h6cBfYbSV6ZB9dI3VD3hjWL7uTVRYdH0Zz00n14HIeRLmSwv6i00dsOw4Jj9')
+let stripe = Stripe('pk_test_51JZCj6R0RVPaP51XFkZ9qfFI7WntpFa3Osz40iSeOUMe12nGR1E8UUyY7yOpkGflsvPSiQBqnAmBQZ5XngLway4I00dnyqVSls')
 
 
 
@@ -106,9 +106,6 @@ const addProduct = async (productKey) => {
 }
 
 
-
-
-
 toCartBtn.addEventListener('click', () => checkout())
 
 const checkout = async () => {
@@ -186,6 +183,69 @@ cardBody.appendChild(purchaseBtn)
 
 renderProduct()
 
+
+const renderReceipt = () => {
+const product = productList
+    
+Object.entries(productList).map((products) => {
+
+
+    let receiptContainer = document.getElementById('receiptContainer') //Product-card
+    let receiptOutputOne = document.createElement('li') // Prod-text-container
+    receiptOutputOne.setAttribute('class', 'list-group-item d-flex justify-content-between lh-sm')
+    let  receiptOutputTwo = document.createElement('div')
+    let  receiptOutputTwoOne = document.createElement('h6') // Prod-title
+    receiptOutputTwoOne.setAttribute('class', 'my-0')
+    let  receiptOutputTwoTwo = document.createElement('small') // Prod-amount
+    receiptOutputTwoTwo.setAttribute('class', 'text-muted')
+    receiptOutputTwoTwo.innerText = products[1].price_data.unit_amount;
+    let  receiptOutputTwoThree = document.createElement('span') // Prod-price
+    receiptOutputTwoThree.setAttribute('class', 'text-muted)') 
+    let receiptOutputThree = document.createElement('li') // Prod-price-container
+    receiptOutputThree.setAttribute('class', 'list-group-item d-flex justify-content-between')
+    let  receiptOutputThreeOne = document.createElement('span') // Prod-price-text
+    receiptOutputThreeOne.innerHTML = Total (Sek);
+    let  receiptOutputThreeTwo = document.createElement('strong') // Prod-price
+    receiptOutputThreeTwo = products[1].price_data.unit_amount /100 + " kr";
+
+    receiptContainer.appendChild(receiptOutputOne)
+    receiptOutputOne.appendChild(receiptOutputTwo)
+    receiptOutputTwo.appendChild(receiptOutputTwoOne)
+    receiptOutputTwo.appendChild(receiptOutputTwotTwo)
+    receiptOutputOne.appendChild(receiptOutputTwoTwo)
+    receiptOutputOne.appendChild(receiptOutputTwoThree)
+    receiptOutputThree.appendChild(receiptOutputThreeOne)
+    receiptOutputThree.appendChild(receiptOutputThreeTwo)
+
+    
+})
+
+}
+
+
+async function main() {
+    
+
+    const isVerified = await verify();
+    console.log("isVerified", isVerified);
+
+    if (isVerified) {
+        alert("Tack för ditt köp!")
+    } else {
+        alert("Ajdå!")
+    }
+    localStorage.removeItem("session");
+}
+
+main;
+
+function renderReceipt() {
+
+}
+
+function saveReceipt()  {
+
+}
 
 /* const line_items = { 
         quantity: item.quantity, 
