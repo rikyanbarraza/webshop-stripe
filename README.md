@@ -1,17 +1,39 @@
 Göfab tian
 ------------------------------------------------------------
+En webshop inspirerad på en gammal klassiker med node.JS, stripe och Bootstrap
+------------------------------------------------------------
+Följande krävs för att få hemsidan att fungera:
+NodeJs ( https://nodejs.org/en/download/ )
+
+Installeras via terminalen i din text editor:
+Node ( npm init )
+Stripe ( npm install stripe --save )
+Nodemon ( npm install -g nodemon )
+
+Skapa en fil med namn ".env" i root mappen av projektet och lägg in din Secret key av Stripe.
+ex. " STRIPE_SECRET_KEY=sk_test_51**************************************************** "
+
+Även redigera in din "Publishable key" som du får av Stripe.
+Filen du redigerar är "public/script.js" och under "rad 4"
+ex " let stripe = Stripe('pk_test_51*************************************************') "
+
+Eter allt detta har följts så startar du projektet i din text editors terminal med följande commando:
+"Npm start"
 
 ------------------------------------------------------------
 Krav för godkänt:
-1.	Ni skall bygga en simpel webshop med valfri stack. Tillsammans
-2.	Er webbshop skall ha som minst två sidor, en där produkter listas (startsida) samt en där en kundvagn finns. Tillsammans
-3.	Det skall gå att genomföra ett köp och få en bekräftelse av att köpet genomförts. Victor
-4.	Efter verifikation ifrån Stripe att ett köp genomförts skall ordern sparas i en JSON-fil på servern. Andreas
-5.	Vid verifikation att köpet är gjort skall det ej vara möjligt att en dublett av ordern sparas. i JSON-filen (kolla om ordern redan existerar i JSON-filen). Tillsammans
+1.	Ni skall bygga en simpel webshop med valfri stack.
+2.	Er webbshop skall ha som minst två sidor, en där produkter listas (startsida) samt en där en kundvagn finns.
+3.	Det skall gå att genomföra ett köp och få en bekräftelse av att köpet genomförts.
+4.	Efter verifikation ifrån Stripe att ett köp genomförts skall ordern sparas i en JSON-fil på servern.(sparas i filen items.json)
+5.	Vid verifikation att köpet är gjort skall det ej vara möjligt att en dublett av ordern sparas. i JSON-filen (kolla om ordern redan existerar i JSON-filen).
 
 (Git & GitHub har använts.
 Projektmappen innehåller en README.md fil (läs ovan för mer info).
 Uppgiften lämnas in i tid!)
+
+--------------------------------------------------------------
+Skärmdumpar
 --------------------------------------------------------------
 ![Screenshot 2021-09-30 21 41 40](https://user-images.githubusercontent.com/72126060/135524664-4fffa221-b88c-4224-aa08-90c81018eaef.png)
 ![Screenshot 2021-09-30 21 42 05](https://user-images.githubusercontent.com/72126060/135524671-c7cdd724-f47b-42c4-89db-cdda0f5af4cc.png)
