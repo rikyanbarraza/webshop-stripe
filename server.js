@@ -13,6 +13,7 @@ app.use(express.json());
 
 app.post("/api/session/new", async (req, res) => {
 
+    
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: req.body.line_items,
@@ -38,9 +39,10 @@ app.post("/api/session/verify", async (req, res) => {
 
       if (!orderItem) {
         orderItem = {
-          amount: session.amount_total / 100,
-          customerId: session.customer,
-          customerEmail: session.customer_details.email,
+            customerId: session.customer,
+            customerEmail: session.customer_details.email,
+            totalPrice: session.amount_total / 100,
+            currency: session.currency,
         };
         data.push(orderItem);
         fs.writeFileSync("items.json", JSON.stringify(data));
