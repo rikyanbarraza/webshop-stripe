@@ -1,7 +1,8 @@
-Göfab tian
+Göfab Tian
 ------------------------------------------------------------
 En webshop inspirerad på en gammal klassiker med node.JS, stripe och Bootstrap
 ------------------------------------------------------------
+
 Följande krävs för att få hemsidan att fungera:
 NodeJs ( https://nodejs.org/en/download/ )
 
