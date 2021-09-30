@@ -12,12 +12,12 @@ Node ( npm init )
 Stripe ( npm install stripe --save )
 Nodemon ( npm install -g nodemon )
 
-3. Skapa en fil med namn ".env" i root mappen av projektet och lägg in din Secret key av Stripe.
-ex. " STRIPE_SECRET_KEY=sk_test_51**************************************************** "
+3. Skapa en fil med namn ".env" i root mappen av projektet och lägg in din Secret key av Stripe.<br>
+tex. " STRIPE_SECRET_KEY=sk_test_51**************************************************** "
 
 4. Även redigera in din "Publishable key" som du får av Stripe.
 Filen du redigerar är "public/script.js" och under "rad 4"
-ex " let stripe = Stripe('pk_test_51*************************************************') "
+tex " let stripe = Stripe('pk_test_51*************************************************') "
 
 5. Eter allt detta har följts så startar du projektet i din text editors terminal med följande commando:
 "Npm start"
