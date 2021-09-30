@@ -4,11 +4,11 @@ const toCartBtn = document.getElementById('toCart');
 
 let stripe = Stripe('pk_test_51Jc7a0L3xesmMHJgbAPWLEn3t20phRDibRXtF4h6cBfYbSV6ZB9dI3VD3hjWL7uTVRYdH0Zz00n14HIeRLmSwv6i00dsOw4Jj9')
 
-
+//Produktlista
 
 const productList = 
     {
-"Candy Bars": {
+"Candybars": {
     description: 'Mumsiga candy bars',
     
     price_data: {
@@ -83,12 +83,13 @@ const productList =
     
 }
 
-
+//Kundkorg
 
 let cart = {};
 
 const addProduct = async (productKey) => {
     const product = productList[productKey]
+    
     if (!product) {
         throw new Error("Product does not exist")
     }
@@ -98,6 +99,8 @@ const addProduct = async (productKey) => {
     console.log({ cart, line_items: Object.values(cart)})
 
     localStorage.setItem("cart", JSON.stringify(cart));
+    console.log(cart)
+
     cartQuantity = cart[productKey].quantity
     
     if (cartQuantity) {
@@ -107,31 +110,7 @@ const addProduct = async (productKey) => {
 
 
 
-
-
-toCartBtn.addEventListener('click', () => checkout())
-
-const checkout = async () => {
-    try {
-    if (Object.keys(cart).lenght == 0) {
-        throw new Error("No products added");
-    }
-
-    const response = await fetch('/api/session/new', {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
-            line_items: Object.values(cart)
-        })
-    });
-    const { id } = await response.json();
-    stripe.redirectToCheckout({ sessionId: id})
-    } 
-    catch (err) {
-        console.error(err)
-    }
-}
-
+//Rendera ut produkter 
 
 const renderProduct = () => {
 const product = productList
@@ -148,7 +127,7 @@ Object.entries(productList).map((products) => {
     cardBody.setAttribute("class", "card-body");
 
     let productTitle = document.createElement('h3')
-    productTitle.setAttribute("class", "card-text");
+    productTitle.setAttribute("class", "card-text mt-2");
     productTitle.innerText = products[0]
 
     let descriptionText = document.createElement('p')
@@ -168,7 +147,7 @@ Object.entries(productList).map((products) => {
     purchaseBtn.setAttribute("class", "btn btn-sm btn-outline-secondary");
     purchaseBtn.setAttribute("id", "makePurchase");
     purchaseBtn.addEventListener('click', () => addProduct(products[0]))
-    purchaseBtn.innerHTML = "Lägg till"
+    purchaseBtn.innerHTML = "Lägg till i varukorg"
     
 
 productContainer.appendChild(productOutput)
@@ -187,16 +166,32 @@ cardBody.appendChild(purchaseBtn)
 renderProduct()
 
 
-/* const line_items = { 
-        quantity: item.quantity, 
-        price_data: {
-            currency: 'sek',
-            unit_amount: item.price * 100,
-            product_data: {
-                name: item.title,
-                description: item.description,
-                images: [item.imageUrl], 
-            }
-        }
-    } */
+
+
+
+//Betalning - Gå till kassan
+
+const checkout = async () => {
+    try {
+    if (Object.keys(cart).lenght == 0) {
+        throw new Error("No products added");
+    }
+
+    const response = await fetch('/api/session/new', {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+            line_items: Object.values(cart)
+        })
+    });
+    const { id } = await response.json();
+    localStorage.setItem("session", id)
+    stripe.redirectToCheckout({ sessionId: id})
+} 
+catch (err) {
+    console.error(err)
+}
+}
+
+toCartBtn.addEventListener('click', () => checkout())
 
