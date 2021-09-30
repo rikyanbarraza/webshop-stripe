@@ -4,21 +4,22 @@ En webshop inspirerad på en gammal klassiker med node.JS, stripe och Bootstrap
 ------------------------------------------------------------
 
 Följande krävs för att få hemsidan att fungera:
-NodeJs ( https://nodejs.org/en/download/ )
+-----------------------------------------------------------
+1. NodeJs ( https://nodejs.org/en/download/ )
 
-Installeras via terminalen i din text editor:
+2. Installeras via terminalen i din text editor:
 Node ( npm init )
 Stripe ( npm install stripe --save )
 Nodemon ( npm install -g nodemon )
 
-Skapa en fil med namn ".env" i root mappen av projektet och lägg in din Secret key av Stripe.
+3. Skapa en fil med namn ".env" i root mappen av projektet och lägg in din Secret key av Stripe.
 ex. " STRIPE_SECRET_KEY=sk_test_51**************************************************** "
 
-Även redigera in din "Publishable key" som du får av Stripe.
+4. Även redigera in din "Publishable key" som du får av Stripe.
 Filen du redigerar är "public/script.js" och under "rad 4"
 ex " let stripe = Stripe('pk_test_51*************************************************') "
 
-Eter allt detta har följts så startar du projektet i din text editors terminal med följande commando:
+5. Eter allt detta har följts så startar du projektet i din text editors terminal med följande commando:
 "Npm start"
 
 ------------------------------------------------------------
