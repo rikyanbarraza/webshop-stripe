@@ -36,6 +36,10 @@ Projektmappen innehåller en README.md fil (läs ovan för mer info).
 Uppgiften lämnas in i tid!)
 
 --------------------------------------------------------------
+Bugar
+-------------------------------------------------------------
+* får inte ut bilder i stripe checkout
+--------------------------------------------------------------
 Skärmdumpar
 --------------------------------------------------------------
 ![Screenshot 2021-09-30 21 41 40](https://user-images.githubusercontent.com/72126060/135524664-4fffa221-b88c-4224-aa08-90c81018eaef.png)
