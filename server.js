@@ -16,7 +16,7 @@ app.post("/api/session/new", async (req, res) => {
       payment_method_types: ["card"],
       line_items: req.body.line_items,
       mode: "payment",
-      success_url: "http://localhost:3000/receipt.html",
+      success_url: "http://localhost:3000/checkout_success.html",
       cancel_url: "http://localhost:3000/index.html"   
     })
     console.log(session)
@@ -38,6 +38,6 @@ app.post("/api/session/verify", async (req, res) => {
 
 app.use(express.static('public'));
 
-app.listen(3001, () => {
+app.listen(3000, () => {
     console.log("Server is running")
 })
