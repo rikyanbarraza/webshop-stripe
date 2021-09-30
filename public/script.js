@@ -104,7 +104,7 @@ price_data: {
         }
     },  
 "Sandwich": {
-    description: 'En kopp Espresso',
+    description: 'För jävla go macka',
 
     price_data: {
         currency: 'sek',
