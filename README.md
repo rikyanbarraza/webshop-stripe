@@ -7,19 +7,19 @@ Följande krävs för att få hemsidan att fungera:
 -----------------------------------------------------------
 1. NodeJs ( https://nodejs.org/en/download/ )
 
-2. Installeras via terminalen i din text editor:
-Node ( npm init )
-Stripe ( npm install stripe --save )
-Nodemon ( npm install -g nodemon )
+2. Installeras via terminalen i din text editor:<br>
+Node ( npm init )<br>
+Stripe ( npm install stripe --save )<br>
+Nodemon ( npm install -g nodemon )<br>
 
 3. Skapa en fil med namn ".env" i root mappen av projektet och lägg in din Secret key av Stripe.<br>
 tex. " STRIPE_SECRET_KEY=sk_test_51**************************************************** "
 
-4. Även redigera in din "Publishable key" som du får av Stripe.
-Filen du redigerar är "public/script.js" och under "rad 4"
+4. Även redigera in din "Publishable key" som du får av Stripe.<br>
+Filen du redigerar är "public/script.js" och under "rad 4"<br>
 tex " let stripe = Stripe('pk_test_51*************************************************') "
 
-5. Eter allt detta har följts så startar du projektet i din text editors terminal med följande commando:
+5. Eter allt detta har följts så startar du projektet i din text editors terminal med följande commando:<br>
 "Npm start"
 
 ------------------------------------------------------------
