@@ -16,7 +16,7 @@ Nodemon ( npm install -g nodemon )<br>
 tex. " STRIPE_SECRET_KEY=sk_test_51**************************************************** "
 
 4. Även redigera in din "Publishable key" som du får av Stripe.<br>
-Filen du redigerar är "public/script.js" och under "rad 4"<br>
+Filen du redigerar är "public/script.js" under "rad 4"<br>
 tex " let stripe = Stripe('pk_test_51*************************************************') "
 
 5. Eter allt detta har följts så startar du projektet i din text editors terminal med följande commando:<br>
