@@ -33,6 +33,7 @@ Krav för godkänt:
 (sparas i filen items.json)
 5.	Vid verifikation att köpet är gjort skall det ej vara möjligt att en dublett av ordern sparas. i JSON-filen (kolla om ordern redan existerar i JSON-filen).
 
+6. Adressen till hemsidan är localhost:3000
 (Git & GitHub har använts.
 Projektmappen innehåller en README.md fil (läs ovan för mer info).
 Uppgiften lämnas in i tid!)
