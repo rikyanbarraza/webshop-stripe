@@ -24,6 +24,8 @@ tex " let stripe = Stripe('pk_test_51*******************************************
 5. Eter allt detta har följts så startar du projektet i din text editors terminal med följande commando:<br>
 "Npm start"
 
+
+6. Adressen till hemsidan är localhost:3000
 ------------------------------------------------------------
 Krav för godkänt:
 1.	Ni skall bygga en simpel webshop med valfri stack.
@@ -33,7 +35,6 @@ Krav för godkänt:
 (sparas i filen items.json)
 5.	Vid verifikation att köpet är gjort skall det ej vara möjligt att en dublett av ordern sparas. i JSON-filen (kolla om ordern redan existerar i JSON-filen).
 
-6. Adressen till hemsidan är localhost:3000
 (Git & GitHub har använts.
 Projektmappen innehåller en README.md fil (läs ovan för mer info).
 Uppgiften lämnas in i tid!)
