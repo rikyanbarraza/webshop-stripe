@@ -9,10 +9,10 @@ Följande krävs för att få hemsidan att fungera:
 
 2. Installeras via terminalen i din text editor:<br>
 *express ( npm install express )<br>
-*Node ( npm init )<br>
+*packages ( npm init )<br>
 *dotenv ( npm install dotenv )<br>
-*Stripe ( npm install stripe --save )<br>
-*Nodemon ( npm install -g nodemon )<br>
+*stripe ( npm install stripe --save )<br>
+*nodemon ( npm install -g nodemon )<br>
 
 3. Skapa en fil med namn ".env" i root mappen av projektet och lägg in din Secret key av Stripe.<br>
 tex. " STRIPE_SECRET_KEY=sk_test_51**************************************************** "
