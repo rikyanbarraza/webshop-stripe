@@ -238,7 +238,7 @@ Object.entries(productList).map((products) => {
     purchaseBtn.setAttribute("class", "btn btn-sm btn-outline-secondary");
     purchaseBtn.setAttribute("id", "makePurchase");
     purchaseBtn.addEventListener('click', () => addProduct(products[0]))
-    purchaseBtn.innerHTML = "Lägg till i varukorg"
+    purchaseBtn.innerHTML = "Lägg till i kundvagn"
     
 
 productContainer.appendChild(productOutput)
